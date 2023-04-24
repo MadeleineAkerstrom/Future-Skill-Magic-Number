@@ -1,0 +1,28 @@
+using API;
+using System;
+using System.Collections.Generic;
+
+namespace Solution
+{
+    public class Solution : ISolution
+    {
+        private APICaller api;
+
+        public Solution(APICaller api)
+        {
+            this.api = api;
+            Console.WriteLine("Press run code to see this in the console!");
+            // You can initiate and calculate things here
+        }
+
+        /**
+         * Return the magic number which you get from the api.
+         */
+        public int ReturnMagicNumber()
+        {
+            // Write your code here
+            var magic = api.GetMagicNumber();
+            return magic;
+        }
+    }
+}
